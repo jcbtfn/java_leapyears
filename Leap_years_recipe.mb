@@ -1,0 +1,22 @@
+# User stories
+As a user I would like to input a number representing a year and I would like to know if the year is
+a leap year or not
+
+# 1
+App.java < Will ask the user for a number
+Then pass it to a method from a LeapYear class that will let us know if the year is a leap year or not
+
+LeapYear.java < Will have the methods
+method isLeapYear that will return a boolean, true if its a leap year false otherwise
+
+# 2
+Scanner taking an integer (APP.java)
+passing that to LeapYear (LEAPYEAR.JAVA)
+LeapYear returning boolean if its leap year or not (LEAPYEAR.JAVA)
+Then writing the answer for the user (APP.java)
+
+# 3 CONDITIONS for LeapYear
+All years divisible by 400 ARE leap years (e.g. 2000 was a leap year)
+All years divisible by 100 but not by 400 are NOT leap years (e.g. 1700, 1800 and 1900 were not leap years)
+All years divisible by 4 and not by 100 ARE leap years (e.g. 2004, 2008 and 2012 were leap years)
+All years not divisible by 4 are NOT leap years (e.g. 2009, 2010 and 2011 were not leap years)
