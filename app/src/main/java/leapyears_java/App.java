@@ -3,12 +3,29 @@
  */
 package leapyears_java;
 
+import java.util.Scanner;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+      System.out.print("Please input the year: ");
+      Scanner userYearInput = new Scanner(System.in);
+      String yearInput = userYearInput.nextLine();
+      LeapYear annodomine = new LeapYear(Integer.valueOf(yearInput));
+      System.out.print ("The year " + yearInput);
+      if (annodomine.isleapyear()){
+        System.out.print (" is ");
+      } else {
+        System.out.print (" is not ");
+      }
+      System.out.print ("a leap year.");
     }
 }
+
+// All years divisible by 400 ARE leap years (e.g. 2000 was a leap year)
+// All years divisible by 100 but not by 400 are NOT leap years (e.g. 1700, 1800 and 1900 were not leap years)
+// All years divisible by 4 and not by 100 ARE leap years (e.g. 2004, 2008 and 2012 were leap years)
+// All years not divisible by 4 are NOT leap years (e.g. 2009, 2010 and 2011 were not leap years)
